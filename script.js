@@ -63,7 +63,7 @@ revealButton.addEventListener("click", () =>  {
         label.style.color = "#5D87F4"
         gloLogo.classList.remove('hide-logo')
     }
-    else if(phoneStarts.match(airtelNumbers) && !(phoneNumber.toString().length <= 11)){
+    else if(phoneStarts.match(airtelNumbers) && !(phoneNumber.toString().length < 11)){
         placeholder.classList.add('hide-logo')
         for (const scanThrough of brandLogos){
             scanThrough.classList.add('hide-logo')
