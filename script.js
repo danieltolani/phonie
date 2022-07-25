@@ -29,12 +29,24 @@ revealButton.addEventListener("click", () =>  {
 
     // console.log(found);
 
-    if(phoneStarts.match(mtnNumbers) && !(phoneNumber.toString().length < 11)){
+    if(phoneNumber.toString().length > 11 || phoneNumber.toString().length < 11){
+        for (const scanThrough of brandLogos){
+            scanThrough.classList.add('hide-logo')
+        }
+        label.innerHTML = "Invalid number, try again"
+        label.style.color = "#F23C3C"
+        placeholder.classList.remove('hide-logo')
+                
+
+    }
+    else if(phoneStarts.match(mtnNumbers) && !(phoneNumber.toString().length < 11)){
         // console.log("I am an mtn number")
         placeholder.classList.add('hide-logo')
         for (const scanThrough of brandLogos){
             scanThrough.classList.add('hide-logo')
         }
+        label.innerHTML = "Success! carrier identified"
+        label.style.color = "#5D87F4"
         mtnLogo.classList.remove('hide-logo')
     }
     else if(phoneStarts.match(gloNumbers) && !(phoneNumber.toString().length < 11)){
@@ -42,13 +54,17 @@ revealButton.addEventListener("click", () =>  {
         for (const scanThrough of brandLogos){
             scanThrough.classList.add('hide-logo')
         }
+        label.innerHTML = "Success! carrier identified"
+        label.style.color = "#5D87F4"
         gloLogo.classList.remove('hide-logo')
     }
-    else if(phoneStarts.match(airtelNumbers) && !(phoneNumber.toString().length < 11)){
+    else if(phoneStarts.match(airtelNumbers) && !(phoneNumber.toString().length <= 11)){
         placeholder.classList.add('hide-logo')
         for (const scanThrough of brandLogos){
             scanThrough.classList.add('hide-logo')
         }
+        label.innerHTML = "Success! carrier identified"
+        label.style.color = "#5D87F4"
         airtelLogo.classList.remove('hide-logo')
     }
     else if(phoneStarts.match(nineMobibleNumbers) && !(phoneNumber.toString().length < 11)){
@@ -56,6 +72,8 @@ revealButton.addEventListener("click", () =>  {
         for (const scanThrough of brandLogos){
             scanThrough.classList.add('hide-logo')
         }
+        label.innerHTML = "Success! carrier identified"
+        label.style.color = "#5D87F4"
         nineMobileLogo.classList.remove('hide-logo')
     }
 
