@@ -123,6 +123,10 @@ let phoneNumber = document.getElementById('phone-number')
 phoneNumber.addEventListener("blur", () =>{
     label.innerHTML = "Enter phone number"
     label.style.color = "#9DB7F8"
+    for (const scanThrough of brandLogos){
+        scanThrough.classList.add('hide-logo')
+    }
+    placeholder.classList.remove('hide-logo')
 })
 
 // function getFirstFourDigit(){
