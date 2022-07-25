@@ -16,6 +16,12 @@ for (const scanThrough of brandLogos){
     scanThrough.classList.add('hide-logo')
 }
 
+// if(phoneNumber == ""){
+//     label.innerHTML = "Enter phone number"
+//     label.style.color = "#9DB7F8"
+// }
+
+
 revealButton.addEventListener("click", () =>  {
     let phoneNumber = document.getElementById('phone-number').value
     let phoneStarts = phoneNumber.substring(0,4)
@@ -28,7 +34,6 @@ revealButton.addEventListener("click", () =>  {
     // const found = phoneStarts.match(mtnNumbers);
 
     // console.log(found);
-
     if(phoneNumber.toString().length > 11 || phoneNumber.toString().length < 11){
         for (const scanThrough of brandLogos){
             scanThrough.classList.add('hide-logo')
@@ -111,6 +116,13 @@ revealButton.addEventListener("click", () =>  {
     // }
 
 
+})
+
+let phoneNumber = document.getElementById('phone-number')
+
+phoneNumber.addEventListener("blur", () =>{
+    label.innerHTML = "Enter phone number"
+    label.style.color = "#9DB7F8"
 })
 
 // function getFirstFourDigit(){
