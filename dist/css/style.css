@@ -33,9 +33,17 @@ body {
 .main-content-container .form-wrap {
   display: flex;
   margin-top: 5.5rem;
+  margin-bottom: 6.5rem;
 }
-.main-content-container .form-wrap .suggestions {
-  background-color: #3C6FF2;
+.main-content-container .form-wrap .suggestion-contain {
+  position: absolute;
+}
+.main-content-container .form-wrap .suggestion-contain .suggestions {
+  position: relative;
+  max-height: 30.625rem;
+  background-color: red;
+  overflow-y: hidden;
+  transform: translateY(-14rem);
 }
 .main-content-container .form-wrap form.form {
   min-width: 37.1875rem;
@@ -117,7 +125,7 @@ body {
   display: none;
 }
 .main-content-container button.button {
-  margin-top: 6.5rem;
+  position: relative;
   width: 520px;
   height: 124px;
   justify-content: center;

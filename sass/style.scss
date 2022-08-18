@@ -13,6 +13,7 @@ $Tertiary-Blue: #5D87F4;
 $Secondary-Blue: #9DB7F8;
 $Error-Red: #F23C3C;
 $White: #FFFFFF;
+$suggesion-bg: #F7F9FE;
 
 body{
     background-color: #FBFCFE;
@@ -44,10 +45,22 @@ body{
     .form-wrap{
         display: flex;
         margin-top: 5.5rem;
+        margin-bottom: 6.5rem;
+        
 
-        .suggestions{
-            background-color: #3C6FF2;
-        }
+        .suggestion-contain{
+            position: absolute;
+            
+
+            .suggestions{
+                position: relative;
+                max-height: 30.625rem;
+                background-color: red;
+                overflow-y: hidden;
+                transform: translateY(-14rem);
+            }
+        }   
+        
 
         form.form{
             min-width: 37.1875rem;
@@ -148,7 +161,8 @@ body{
     }
 
     button.button{
-        margin-top: 6.5rem;
+        position: relative;
+        // margin-top: 6.5rem;
         width: 520px;
         height: 124px;
         justify-content: center;

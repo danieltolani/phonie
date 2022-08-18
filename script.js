@@ -14,12 +14,8 @@ for (const scanThrough of brandLogos) {
   scanThrough.classList.add("hide-logo");
 }
 
-// const Logos = [
-//     <svg width="61" height="61" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.938.889h58.8v58.798H.938V.889Z" fill="#FFC325"/><path d="M1.828 30.288c0-6.14 12.763-11.12 28.506-11.12 15.744 0 28.506 4.98 28.506 11.12 0 6.141-12.762 11.119-28.506 11.119S1.828 36.429 1.828 30.288Z" fill="#006891"/><path d="M1.828 30.288c0-6.14 12.763-11.12 28.506-11.12 15.744 0 28.506 4.98 28.506 11.12 0 6.141-12.762 11.119-28.506 11.119S1.828 36.429 1.828 30.288Z" stroke="#006891" stroke-width="1.405" stroke-miterlimit="3.864"/><path fill-rule="evenodd" clip-rule="evenodd" d="m12.277 35.693 2.959-11.044h4.67v6.495h.03l3.168-6.495h4.744l-2.959 11.044h-3.083l1.896-7.084h-.03l-3.766 7.084h-2.47v-7.084h-.05l-1.896 7.084h-3.213Z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="m28.684 35.911.42-1.57h3.403l-.42 1.57h-3.403Z" fill="#EE4034"/><path fill-rule="evenodd" clip-rule="evenodd" d="m29.22 33.9 1.721-6.42h-3.093l.759-2.831h9.59l-.759 2.83h-3.094l-1.72 6.42-3.404.002Z" fill="#FFC325"/><path fill-rule="evenodd" clip-rule="evenodd" d="m35.996 35.693 2.957-11.044h3.342l1.508 5.91h.03l1.582-5.91h3.09l-2.958 11.044h-3.18L40.73 29.66h-.03l-1.614 6.032h-3.09Z" fill="#fff"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(.336 .288)" d="M0 0h60v60H0z"/></clipPath></defs></svg>
-// ]
-
 // Array of Logos for suggestions
-// Index 0 is MTN // Index 1 is GLO // Index 2 is airtel
+// Index 0 is MTN // Index 1 is GLO // Index 2 is airtel // Index 3 is 9mobile
 const Logos = [
   '<svg width="61" height="61" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M.938.889h58.8v58.798H.938V.889Z" fill="#FFC325"/><path d="M1.828 30.288c0-6.14 12.763-11.12 28.506-11.12 15.744 0 28.506 4.98 28.506 11.12 0 6.141-12.762 11.119-28.506 11.119S1.828 36.429 1.828 30.288Z" fill="#006891"/><path d="M1.828 30.288c0-6.14 12.763-11.12 28.506-11.12 15.744 0 28.506 4.98 28.506 11.12 0 6.141-12.762 11.119-28.506 11.119S1.828 36.429 1.828 30.288Z" stroke="#006891" stroke-width="1.405" stroke-miterlimit="3.864"/><path fill-rule="evenodd" clip-rule="evenodd" d="m12.277 35.693 2.959-11.044h4.67v6.495h.03l3.168-6.495h4.744l-2.959 11.044h-3.083l1.896-7.084h-.03l-3.766 7.084h-2.47v-7.084h-.05l-1.896 7.084h-3.213Z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="m28.684 35.911.42-1.57h3.403l-.42 1.57h-3.403Z" fill="#EE4034"/><path fill-rule="evenodd" clip-rule="evenodd" d="m29.22 33.9 1.721-6.42h-3.093l.759-2.831h9.59l-.759 2.83h-3.094l-1.72 6.42-3.404.002Z" fill="#FFC325"/><path fill-rule="evenodd" clip-rule="evenodd" d="m35.996 35.693 2.957-11.044h3.342l1.508 5.91h.03l1.582-5.91h3.09l-2.958 11.044h-3.18L40.73 29.66h-.03l-1.614 6.032h-3.09Z" fill="#fff"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(.336 .288)" d="M0 0h60v60H0z"/></clipPath></defs></svg>',
   '<svg width="61" height="61" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.486 53.852c13.314 0 24.108-10.793 24.108-24.107 0-13.315-10.794-24.108-24.108-24.108S6.38 16.43 6.38 29.744c0 13.315 10.793 24.108 24.107 24.108Z" fill="#50B651"/><path opacity=".663" fill-rule="evenodd" clip-rule="evenodd" d="M54.52 29.677c0 13.356-10.828 24.183-24.18 24.183-13.354 0-24.184-10.827-24.184-24.183 0-5.909.166-6.787 2.491-10.15 0 0-.12 3.799 2.666 6.06 1.732 1.404 3.54.39 6.85-1.134 3.579-1.65 6.489-2.714 8.76-2.433 3.42.423 13.96 6.754 19.462 5.493 4.395-1.005 3.931-11.367 3.931-11.367 4.8 4.687 4.203 7.855 4.203 13.53Z" fill="url(#a)"/><path opacity=".586" fill-rule="evenodd" clip-rule="evenodd" d="M40.715 47.44c8.746-8.227 10.2-17.652 4.361-28.275.03.022.391-1.224 1.084-3.739 3.107 3.763 4.76 8.407 4.956 13.933-.001 7.158-3.468 13.185-10.401 18.08Z" fill="url(#b)"/><path opacity=".744" fill-rule="evenodd" clip-rule="evenodd" d="M36.565 15.476c-4.222-2.337-9.065-7.036-8.421-8.023.644-.987 9-.817 13.222 1.519 4.222 2.336 7.816 9.345 7.172 10.332-.643.987-7.752-1.492-11.973-3.828Z" fill="url(#c)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M40.244 35.681c-3.502 0-6.342-2.92-6.342-6.521 0-3.602 2.84-6.522 6.342-6.522s6.342 2.92 6.342 6.521c0 3.602-2.84 6.523-6.342 6.523Zm.045-2.068c2.185 0 3.96-1.994 3.96-4.453 0-2.46-1.775-4.452-3.96-4.452-2.186 0-3.96 1.994-3.96 4.453 0 2.458 1.774 4.452 3.96 4.452ZM27.16 17.387h4.57v18.222H29.22V19.385h-2.06v-1.998ZM23.752 22.823h2.372v15.218c0 1.386-1.458 2.83-2.88 3.452-.672.294-1.912.468-3.72.523v-1.514c1.768-.197 2.962-.59 3.58-1.18.358-.496.581-1.076.649-1.683v-4.47c-.634 1.344-1.433 2.236-2.395 2.675-1.001.54-3.038.45-3.87 0-.831-.452-2.051-1.64-2.61-3.41-.155-.487-.54-1.816-.5-3.225.036-1.34.48-2.76.849-3.343.633-.996 1.633-2.243 3.146-2.765.739-.255 2.109-.346 4.11-.274v1.505c-1.487-.1-2.415-.05-2.783.15-.553.3-1.8.67-2.212 3.39-.411 2.718.012 4.943 1.317 5.64.447.24 1.238.523 1.969.273 1.404-.48 2.725-2.192 2.826-3.352.101-1.177.152-3.713.152-7.61Z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M53.76 34.517c-2.24 10.785-11.797 18.889-23.245 18.889-13.112 0-23.742-10.63-23.742-23.742 0-8.146 4.103-15.333 10.353-19.608-5.079 4.212-8.313 10.575-8.313 17.69 0 12.692 10.29 22.98 22.98 22.98 10.336 0 19.077-6.822 21.967-16.21Z" fill="url(#d)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M30.515 1.548c-15.528 0-28.117 12.588-28.117 28.116s12.589 28.117 28.117 28.117 28.117-12.589 28.117-28.117S46.043 1.548 30.515 1.548Zm0 51.858c-13.112 0-23.741-10.63-23.741-23.741 0-8.146 4.102-15.333 10.353-19.608a23.63 23.63 0 0 1 13.388-4.134c13.112 0 23.741 10.629 23.741 23.741.001 1.63-.165 3.256-.496 4.853-2.24 10.785-11.796 18.889-23.245 18.889Z" fill="#fff"/><defs><radialGradient id="c" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(10.6367 5.36381 -2.23393 4.43 38.855 13.537)"><stop offset=".13" stop-color="#fff"/><stop offset=".29" stop-color="#fff" stop-opacity=".69"/><stop offset=".45" stop-color="#fff" stop-opacity=".4"/><stop offset=".59" stop-color="#fff" stop-opacity=".18"/><stop offset=".69" stop-color="#fff" stop-opacity=".05"/><stop offset=".74" stop-color="#fff" stop-opacity="0"/></radialGradient><radialGradient id="d" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(39.84 -16.088 59.816) scale(26.6958 29.0984)"><stop offset=".86" stop-opacity="0"/><stop offset=".98" stop-opacity=".47"/><stop offset="1"/></radialGradient><linearGradient id="a" x1="29.405" y1="19.448" x2="32.505" y2="47.44" gradientUnits="userSpaceOnUse"><stop stop-color="#123214"/><stop offset=".46" stop-color="#3E7C37"/><stop offset=".91" stop-color="#5FBB46"/></linearGradient><linearGradient id="b" x1="47.31" y1="17.629" x2="47.31" y2="40.264" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"/><stop offset=".64" stop-color="#fff" stop-opacity=".43"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient></defs></svg>',
@@ -28,36 +24,47 @@ const Logos = [
 ];
 
 // SUGGESTION
-// let input = document.getElementById("phone-number");
+let input = document.getElementById("phone-number");
 
-// input.addEventListener("keyup", (event) => {
-//   const mtnNumbers = /2340803|2340806|2340703|2340706|2340810|2340813|2340814|2340816|2340903|2340906|2340916/;
-//   const gloNumbers = /2340805|2340807|2340811|2340705|2340815|2340905/;
-//   const airtelNumbers = /2340802|2340808|2340812|2340701|2340708|2340902|2340907|2340901/;
-//   const nineMobibleNumbers = /2340809|2340817|2340818|2340908|2340909/;
+input.addEventListener("keyup", (e) => {
+    const mtnNumbers = ['0803', '0806', '0703', '0706', '0810', '0813', '0814', '0816', '0903', '0906']
+    const gloNumbers = ['0805', '0807', '0811', '0705', '0815', '0905']
+    const airtelNumbers = ['0802', '0808', '0812', '0701', '0708', '0902', '0907', '0901']
+    const nineMobileNumbers = ['0809', '0817', '0818', '0908', '0909']
 
-//   // if (event.key == "Backspace") {
-//   //     span.innerText = inputValue
-//   //     span0.innerText = inputValue
-//   //     span1.innerText = inputValue
-//   //     span2.innerText = inputValue
-//   //     input.style.borderColor = 'yellowgreen)'
-//   //     label.style.color = 'yellowgreen'
-//   //     label.innerText = "Invalid number, try again"
-//   // }
+    let userEntry = e.target.value; //userDataEntered
+    let emptyArray = [];
 
-//     suggestion.innerHTML += input.value;
-// });
+    if(userEntry){
+        emptyArray = mtnNumbers.filter((data) => {
+            return data.startsWith(userEntry);
+        })
+        emptyArray = emptyArray.map((data) => {
+            data =  '<li>' + Logos[0] + data + '</li>'
+            suggestion.innerHTML += data
+        })
+        console.log(emptyArray)
+    }
 
-// console.log(input);
+    if(userEntry){
+        emptyArray = gloNumbers.filter((data) => {
+            return data.startsWith(userEntry);
+        })
+        emptyArray = emptyArray.map((data) => {
+            data = '<li>' + Logos[1] + data + '</li>'
+        })
+    }
 
-// if(phoneNumber == ""){
-//     label.innerHTML = "Enter phone number"
-//     label.style.color = "#9DB7F8"
-// }
+    // const mtnNumbers = /2340803|2340806|2340703|2340706|2340810|2340813|2340814|2340816|2340903|2340906|2340916/;
+    // suggestion.innerHTML += input.value; 
+
+    // if(input.match(mtnNumbers)){
+    //     suggestion.innerHTML += input.value; 
+    // }
+    
+});
 
 revealButton.addEventListener("click", () => {
-  console.log(suggestion);
 
   let phoneNumber = document.getElementById("phone-number").value;
   let phoneStarts = "";
@@ -130,36 +137,6 @@ revealButton.addEventListener("click", () => {
         label.style.color = "#5D87F4"
         nineMobileLogo.classList.remove('hide-logo')
     }
-
-    // if(mtnLogo.id == "MTN"){
-    //     console.log("I DEY WORK")
-    // }
-
-    // for(const objectScan in carrierPrefixes){
-
-        // let carrierName = carrierPrefixes[objectScan].includes(phoneNumber.substring(0, 4))
-        // let carrierName = carrierPrefixes[objectScan]
-
-        // console.log(objectScan[0])
-        // console.log(carrierPrefixes[objectScan])
-        // console.log(carrierName);
-        // if(carrierName.includes(phoneNumber.substring(0, 4))){
-        //     console.log(phoneNumber.substring(0, 4));
-        //     if(mtnLogo.id == "MTN" && objectScan == "MTN"){
-        //         console.log("HMMMMM")
-        //     }
-        // }
-
-        // if the fisrt 4 digits match a particular sample data in the object.. it should append a particular html tag
-        // step one: get user input
-        // step two: compare the first four digit in the input with the sample data in the object
-
-        // if(phoneNumber.substring(0, 4) === carrierName){
-        //     console.log("Hello")
-        // }else{
-        //     console.log("not working")
-        // }
-    // }
 });
 
 let phoneNumber = document.getElementById("phone-number");
@@ -172,56 +149,3 @@ phoneNumber.addEventListener("blur", () => {
   }
   placeholder.classList.remove("hide-logo");
 });
-
-// function getFirstFourDigit(){
-//     let phoneNumber = number.value;
-//     console.log(phoneNumber.substring(0, 4))
-
-// }
-
-// getFirstFourDigit()
-
-// const carrierPrefixes = {
-//     MTN: [
-//         "0803",
-//         "0806",
-//         "0703",
-//         "0706",
-//         "0810",
-//         "0813",
-//         "0814",
-//         "0816",
-//         "0903",
-//         "0906",
-//         "0916",
-//     ],
-
-//     GLO: [
-//         "0805",
-//         "0807",
-//         "0811",
-//         "0705",
-//         "0815",
-//         "0905"],
-
-//     AIRTEL: [
-//         "0802",
-//         "0808",
-//         "0812",
-//         "0701",
-//         "0708",
-//         "0902",
-//         "0907",
-//         "0901"],
-
-//     NINEMOBILE: [
-//         "0809",
-//         "0817",
-//         "0818",
-//         "0908",
-//         "0909"],
-//     };
-
-// function get
-// document.body.style.background = "red"
-// revealButton.addEventListener(onclick)
