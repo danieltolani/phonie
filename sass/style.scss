@@ -45,6 +45,10 @@ body{
         display: flex;
         margin-top: 5.5rem;
 
+        .suggestions{
+            background-color: #3C6FF2;
+        }
+
         form.form{
             min-width: 37.1875rem;
             min-height: 11.9rem;
@@ -106,7 +110,15 @@ body{
                 font-size: 1.375rem !important;
                 color: $Tertiary-Blue;
             }
-        }        
+        }  
+        
+        form.form::before{
+            content: '';
+            height: 300px;
+            width: 300px;
+            background-color: red;
+
+        }
         .logo-container{
             width: 175px;
             // height: 175px;

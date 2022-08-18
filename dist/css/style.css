@@ -34,6 +34,9 @@ body {
   display: flex;
   margin-top: 5.5rem;
 }
+.main-content-container .form-wrap .suggestions {
+  background-color: #3C6FF2;
+}
 .main-content-container .form-wrap form.form {
   min-width: 37.1875rem;
   min-height: 11.9rem;
@@ -85,6 +88,12 @@ body {
   font-size: 1.375rem !important;
   color: #5D87F4;
 }
+.main-content-container .form-wrap form.form::before {
+  content: "";
+  height: 300px;
+  width: 300px;
+  background-color: red;
+}
 .main-content-container .form-wrap .logo-container {
   width: 175px;
   background: #FFFFFF;
@@ -121,7 +130,7 @@ body {
   border-radius: 30px;
   color: #FFFFFF;
   font-size: 1.75rem;
-  /* font-family: "gilmer"; */
+  font-family: "gilmer";
   font-weight: 700;
   align-content: center;
   text-align: center;
