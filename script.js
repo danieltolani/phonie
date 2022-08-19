@@ -1,5 +1,5 @@
 let revealButton = document.getElementById("reveal-button");
-let suggestion = document.getElementById("suggest-container");
+let suggestionList = document.getElementById("unordered-suggestion");
 let brandLogo = document.getElementById("placeholder-logo");
 let label = document.getElementById("label");
 let placeholder = document.getElementById("placeholder-logo");
@@ -27,7 +27,8 @@ const Logos = [
 let input = document.getElementById("phone-number");
 
 input.addEventListener("keyup", (e) => {
-    const mtnNumbers = ['0803', '0806', '0703', '0706', '0810', '0813', '0814', '0816', '0903', '0906']
+    const mtnNumbers = ['0803', '0806']
+    // const mtnNumbers = ['0803', '0806', '0703', '0706', '0810', '0813', '0814', '0816', '0903', '0906']
     const gloNumbers = ['0805', '0807', '0811', '0705', '0815', '0905']
     const airtelNumbers = ['0802', '0808', '0812', '0701', '0708', '0902', '0907', '0901']
     const nineMobileNumbers = ['0809', '0817', '0818', '0908', '0909']
@@ -40,27 +41,10 @@ input.addEventListener("keyup", (e) => {
             return data.startsWith(userEntry);
         })
         emptyArray = emptyArray.map((data) => {
-            data =  '<li>' + Logos[0] + data + '</li>'
-            suggestion.innerHTML += data
-        })
-        console.log(emptyArray)
-    }
-
-    if(userEntry){
-        emptyArray = gloNumbers.filter((data) => {
-            return data.startsWith(userEntry);
-        })
-        emptyArray = emptyArray.map((data) => {
-            data = '<li>' + Logos[1] + data + '</li>'
+            data =  '<li class="suggestion-list">' + Logos[0] + '<span class="number-suggestion" >' + data + '</span>' + '</li>'
+            suggestionList.innerHTML += data
         })
     }
-
-    // const mtnNumbers = /2340803|2340806|2340703|2340706|2340810|2340813|2340814|2340816|2340903|2340906|2340916/;
-    // suggestion.innerHTML += input.value; 
-
-    // if(input.match(mtnNumbers)){
-    //     suggestion.innerHTML += input.value; 
-    // }
     
 });
 
