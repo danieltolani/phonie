@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #FBFCFE;
+  background-color: #fbfcfe;
 }
 
 .main-content-container {
@@ -27,13 +27,16 @@ body {
 .main-content-container .brand-details h5.brand-tagline {
   font-size: 2rem;
   font-weight: 400;
-  color: #9DB7F8;
+  color: #9db7f8;
   margin-top: 0.75rem;
 }
 .main-content-container .form-wrap {
   display: flex;
   margin-top: 5.5rem;
   margin-bottom: 6.5rem;
+}
+.main-content-container .form-wrap .hide-content {
+  display: none;
 }
 .main-content-container .form-wrap .suggestion-contain {
   position: absolute;
@@ -42,8 +45,26 @@ body {
   position: relative;
   max-height: 30.625rem;
   background-color: red;
+  border-radius: 27.4564px;
   overflow-y: hidden;
   transform: translateY(-14rem);
+  padding-left: 42px;
+}
+.main-content-container .form-wrap .suggestion-contain .suggestions h1.suggestions-count {
+  font-size: 1.375rem;
+  color: #5d87f4;
+  margin-bottom: 1.5em;
+}
+.main-content-container .form-wrap .suggestion-contain .suggestions ul li.suggestion-list {
+  color: white;
+  display: flex;
+  place-items: center;
+  font-size: 1.75rem;
+  margin-bottom: 2.25rem;
+}
+.main-content-container .form-wrap .suggestion-contain .suggestions ul li.suggestion-list span.number-suggestion {
+  font-size: 1.75rem;
+  margin-left: 1.25rem;
 }
 .main-content-container .form-wrap form.form {
   min-width: 37.1875rem;
@@ -59,7 +80,7 @@ body {
   pointer-events: none;
 }
 .main-content-container .form-wrap form.form .label-name span.label-text {
-  color: #9DB7F8;
+  color: #9db7f8;
   font-size: 2.625rem;
   font-weight: 400;
   position: absolute;
@@ -68,7 +89,7 @@ body {
   transition: all 0.3s ease-out;
 }
 .main-content-container .form-wrap form.form input.input {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 19.15px 50px 5px rgba(60, 111, 242, 0.05);
   border-radius: 27.4564px;
   border: 0px;
@@ -76,7 +97,7 @@ body {
   width: 100%;
   font-size: 2.625rem;
   padding-left: 42px;
-  color: #3C6FF2;
+  color: #3c6ff2;
   font-weight: 400;
 }
 .main-content-container .form-wrap form.form input::-webkit-outer-spin-button,
@@ -87,14 +108,16 @@ body {
 .main-content-container .form-wrap form.form input[type=number] {
   -moz-appearance: textfield;
 }
-.main-content-container .form-wrap form.form input:focus, .main-content-container .form-wrap form.form textarea:focus, .main-content-container .form-wrap form.form select:focus {
+.main-content-container .form-wrap form.form input:focus,
+.main-content-container .form-wrap form.form textarea:focus,
+.main-content-container .form-wrap form.form select:focus {
   outline: none;
 }
 .main-content-container .form-wrap form.form input.input:focus + .label-name .label-text,
 .main-content-container .form-wrap form.form input.input:valid + .label-name .label-text {
   transform: translateY(-42px);
   font-size: 1.375rem !important;
-  color: #5D87F4;
+  color: #5d87f4;
 }
 .main-content-container .form-wrap form.form::before {
   content: "";
@@ -104,22 +127,25 @@ body {
 }
 .main-content-container .form-wrap .logo-container {
   width: 175px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 19.15px 50px 5px rgba(60, 111, 242, 0.05);
   border-radius: 27.4564px;
   border: 0px;
   min-height: 100%;
   margin-left: 1.25rem;
   font-size: 2.625rem;
-  color: #3C6FF2;
+  color: #3c6ff2;
   font-weight: 400;
-  border: 3px dashed #9DB7F8;
+  border: 3px dashed #9db7f8;
   display: flex;
   align-items: center;
   place-items: center;
 }
-.main-content-container .form-wrap .logo-container .carrier-logo {
+.main-content-container .form-wrap .logo-container svg.carrier-logo {
   margin: 0 auto;
+  overflow: auto;
+  width: 75% !important;
+  height: 75% !important;
 }
 .main-content-container .form-wrap .logo-container .hide-logo {
   display: none;
@@ -132,11 +158,11 @@ body {
   display: flex;
   align-items: center;
   place-items: center;
-  background: #3C6FF2;
+  background: #3c6ff2;
   border: 0px;
   box-shadow: 0px 8.04723px 30.1771px rgba(60, 111, 242, 0.25);
   border-radius: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.75rem;
   font-family: "gilmer";
   font-weight: 700;
